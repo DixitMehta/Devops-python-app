@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_IMAGE = studydocs/devops-python-app
+    }
+
+    stages {
+        stage('clone') {
+            steps {
+                git 
+            }
+        }
+    }
+}

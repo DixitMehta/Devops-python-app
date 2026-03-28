@@ -1,0 +1,25 @@
+apiversion: apps/v1
+kind: Deployment
+metadata:
+    name: python-app
+    namespace: devops-demo
+spec:
+    replicas: 2
+    selector: 
+        matchLabels:
+            app: python-app
+    template: 
+        metadata:
+            labels:
+                app: python-app
+        spec:
+            container:
+            - name: aapp
+              image: studydocs/devops-python-app:latest
+              ports:
+              - containerPort: 5000
+              envFrom:
+              - configMapRef:
+                    name: app-configMapRef
+              - secretRef:
+                    name: db-secret
