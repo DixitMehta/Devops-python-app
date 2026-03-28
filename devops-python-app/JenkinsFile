@@ -26,10 +26,11 @@ pipeline {
                 }
             }
         }
+        
 
         stage('Deploy') {
             steps {
-                bat 'kubectl apply -f devops-python-infra/'
+                bat 'kubectl --kubeconfig=C:\\ProgramData\\Jenkins\\.jenkins\\.kube\\config apply -f devops-python-infra/'
             }
         }
     }
