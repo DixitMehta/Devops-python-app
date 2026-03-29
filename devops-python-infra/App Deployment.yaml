@@ -13,8 +13,8 @@ spec:
             labels:
                 app: python-app
         spec:
-            container:
-            - name: aapp
+            containers:
+            - name: app
               image: studydocs/devops-python-app:latest
               ports:
               - containerPort: 5000
