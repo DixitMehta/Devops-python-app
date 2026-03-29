@@ -6,8 +6,8 @@ metadata:
 
 spec:
     rules:
-    - host: python-app.local
-    http:
+    # - host: python-app.local
+    - http:
         paths:
            - path: /
              pathType: Prefix
