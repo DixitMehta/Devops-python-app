@@ -20,6 +20,6 @@ spec:
               - containerPort: 5000
               envFrom:
               - configMapRef:
-                    name: app-configMapRef
+                    name: app-configmapref
               - secretRef:
                     name: db-secret
